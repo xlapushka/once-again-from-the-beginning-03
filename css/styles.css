@@ -1,0 +1,251 @@
+:root {
+  --background-color-first: #ffffff;
+  --background-color-second: #f7f7f7;
+  --accent-color: #ff6c00;
+  --accent-color-hover: rgba(239, 109, 56, 0.8);
+  --medium-color: #9da4bd;
+  --medium-color-second: #555555;
+  --dark-color: #303030;
+
+  --font-family: "Open Sans", sans-serif;
+  --second-family: "Raleway", sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color-first);
+  color: var(--medium-color);
+  font-weight: 400;
+  line-height: 1.36;
+}
+
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+
+.container {
+  width: 1200px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: burlywood;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  font-style: normal;
+  text-decoration: none;
+  color: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.h-reverse {
+}
+
+.h-no-reverse {
+}
+
+.nav {
+  display: inline-block;
+}
+
+.nav-menu {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16.34 / 12);
+  letter-spacing: 10%;
+  color: var(--background-color-first);
+  background-color: aqua;
+
+  padding-left: 100px;
+  padding-top: 52px;
+}
+
+.nav-accent:hover,
+.nav-accent:focus,
+.hero-side-media a:hover,
+.hero-side-media a:focus,
+.list.media:hover,
+.list.media:focus,
+.contacts li:hover,
+.contacts li:focus {
+  color: var(--accent-color);
+}
+
+.btn {
+  display: inline-block;
+  min-width: 160px;
+  height: 40px;
+
+  /* border: 1px solid transparent; */
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+  background-color: inherit;
+
+  padding: 11px 19px;
+
+  color: var(--dark-color);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 9%;
+
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--accent-color-hover);
+}
+/* мʼяка заливка при hover потрібна */
+
+.hero-side-media {
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 20%;
+  color: var(--dark-color);
+}
+
+.hero h1 {
+  font-style: var(--second-family);
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 5%;
+  color: var(--background-color-first);
+}
+
+.subtitle {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.hero h2,
+.services-and-prices h3 {
+  opacity: 0.6;
+}
+
+.about h2,
+.about h3,
+.advantages h2,
+.advantages h3,
+.our-barbers h2,
+.our-barbers h3,
+.photos h3 {
+  color: var(--dark-color);
+}
+
+.hero h3,
+.about h4,
+.services-and-prices p,
+.advantages h4,
+.contacts .city-street,
+.working-hours p {
+  font-size: 18px;
+  line-height: 1.66;
+  letter-spacing: 2%;
+}
+
+.about h4,
+.about p,
+.advantages h4 {
+  color: var(--medium-color-second);
+}
+
+.about h3,
+.services-and-prices h2,
+.advantages h3,
+.our-barbers h2,
+.contacts h2 {
+  font-style: var(--second-family);
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.18;
+  letter-spacing: 5%;
+}
+
+.about p {
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 2%;
+}
+
+.services-and-prices h2,
+.working-hours .subtitle {
+  color: var(--background-color-first);
+}
+
+.advantages p {
+  font-weight: 600;
+  font-size: 11px;
+  color: var(--dark-color);
+}
+
+.advantages p span {
+  font-weight: 700;
+  font-size: 42px;
+  letter-spacing: 2%;
+  color: var(--dark-color);
+}
+
+.advantages p sup {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.38;
+  color: var(--accent-color);
+}
+/* створити невидиу літеру такого ж шрифту, щоб привʼязати sup
+h2 i h3 в різному порядку, не однаково. помітити десь у коментарях це */
+
+.our-barbers h4 {
+  font-size: 18px;
+  letter-spacing: 2%;
+  color: var(--dark-color);
+}
+
+.our-barbers p {
+  font-size: 14px;
+  letter-spacing: 2%;
+  color: var(--accent-color);
+}
+
+.contacts .city-street {
+  font-weight: 700;
+}
