@@ -25,20 +25,24 @@ body {
   box-sizing: border-box;
 } */
 
+img {
+  display: block;
+}
+
 .container {
   width: 1200px;
+  /* перевірити довжину!! довжина по макету + два падінгі по 15px */
   height: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  background-color: burlywood;
 }
 
 .list {
-  list-style: none;
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 .link {
@@ -73,50 +77,76 @@ p {
 }
 
 .h-reverse {
-}
-
-.h-no-reverse {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .nav {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-right: 40px;
+  padding-bottom: 98px;
+  background-color: lightblue;
+}
+
+.logo {
+  margin-right: 131px;
 }
 
 .nav-menu {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+
   font-weight: 600;
   font-size: 12px;
   line-height: calc(16.34 / 12);
   letter-spacing: 10%;
   color: var(--background-color-first);
-  background-color: aqua;
+}
 
-  padding-left: 100px;
-  padding-top: 52px;
+.nav-accent {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/* для збільшення області попадання при хувері */
+
+.nav-menu-first-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.nav-menu.first {
+  margin-right: auto;
+}
+/* не задані пікселі, а автомаичний відступ */
+
+.nav-menu-second-item:not(:last-child) {
+  margin-right: 43px;
 }
 
 .nav-accent:hover,
 .nav-accent:focus,
-.hero-side-media a:hover,
-.hero-side-media a:focus,
 .list.media:hover,
 .list.media:focus,
+.aside-media-item:hover,
+.aside-media-item:focus,
 .contacts li:hover,
 .contacts li:focus {
   color: var(--accent-color);
 }
+/* зробити зміну кольору лого при наведенні */
 
 .btn {
   display: inline-block;
   min-width: 160px;
   height: 40px;
-
+  padding: 11px 19px;
   /* border: 1px solid transparent; */
+  /* потрібно для універсалізації усіх кнопок, потім переназначати колір */
   border: 1px solid var(--accent-color);
   border-radius: 25px;
   background-color: inherit;
-
-  padding: 11px 19px;
 
   color: var(--dark-color);
   font-family: inherit;
@@ -135,17 +165,49 @@ p {
 }
 /* мʼяка заливка при hover потрібна */
 
-.hero-side-media {
+.hero {
+  display: flex;
+  align-items: flex-start;
+  outline: 1px solid grey;
+}
+
+.aside-menu {
+  display: flex;
+  flex-basis: 100px;
+  /* padding-left: 82px;
+  padding-top: 282px;
+  padding-bottom: 40px; */
+  background-color: indianred;
+}
+
+/* .aside-media {
+  display: flex;
+  transform: rotate(-90deg);
+  padding-top: 82px;
+  padding-left: 40px;
+  gap: 40px;
   font-weight: 600;
   font-size: 11px;
   letter-spacing: 20%;
   color: var(--dark-color);
+
+  outline: 1px solid red;
+} */
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-top: 92px;
+  padding-left: 100px;
+  background-color: lightblue;
 }
 
 .hero h1 {
   font-style: var(--second-family);
   font-weight: 700;
   font-size: 72px;
+  padding-bottom: 20px;
   line-height: 1.18;
   letter-spacing: 5%;
   color: var(--background-color-first);
@@ -157,9 +219,51 @@ p {
   font-size: 11px;
 }
 
+.hero h2 {
+  padding-bottom: 20px;
+}
+
 .hero h2,
 .services-and-prices h3 {
   opacity: 0.6;
+}
+
+.hero h3 {
+  padding-bottom: 208px;
+}
+
+.about,
+.services-and-prices,
+.advantages,
+.our-barbers,
+.photos {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.div-flex {
+  display: flex;
+}
+
+.about-photo {
+  display: flex;
+  gap: 30px;
+}
+
+.about-content {
+  width: 470px;
+  padding-left: 30px;
+}
+
+.about h3 {
+  font-size: 42px;
+  font-family: var(--second-family);
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.about h4 {
+  font-weight: 400;
 }
 
 .about h2,
@@ -181,6 +285,18 @@ p {
   font-size: 18px;
   line-height: 1.66;
   letter-spacing: 2%;
+}
+
+.about-content h2,
+.about-content h3,
+.about-content h4,
+.advantages h2,
+.advantages h3 {
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  margin-bottom: 42px;
 }
 
 .about h4,
@@ -210,9 +326,75 @@ p {
 .services-and-prices h2,
 .working-hours .subtitle {
   color: var(--background-color-first);
+  background-color: lightblue;
+}
+
+.services-and-prices h3,
+.our-barbers h3 {
+  margin-bottom: 20px;
+}
+
+.services-and-prices .h-reverse,
+.our-barbers h2,
+.photos h3 {
+  margin-bottom: 44px;
+}
+
+.services-and-prices-pricelist {
+  display: flex;
+  margin-bottom: 44px;
+  gap: 30px;
+}
+
+.services-and-prices .list {
+  display: block;
+  min-width: calc((100% - 30px) / 2);
+  padding: 30px 20px;
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.services-and-prices .line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.services-and-prices .btn {
+  display: block;
+  margin: auto;
+}
+
+.advantages {
+  padding-left: 100px;
+}
+
+.advantages .list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 370px;
+  margin-right: 130px;
+}
+
+.advantages li {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 24px;
+  width: 170px;
+  height: 132px;
+  gap: 6px;
+  background: var(--background-color-second);
+}
+
+.advantages li:nth-child(odd) {
+  margin-right: 30px;
+}
+
+.advantages li:nth-child(even) {
+  margin-top: 30px;
 }
 
 .advantages p {
+  text-align: center;
   font-weight: 600;
   font-size: 11px;
   color: var(--dark-color);
@@ -234,6 +416,19 @@ p {
 /* створити невидиу літеру такого ж шрифту, щоб привʼязати sup
 h2 i h3 в різному порядку, не однаково. помітити десь у коментарях це */
 
+.advantages h3 {
+  width: 430px;
+}
+
+.advantages h4 {
+  font-weight: 400;
+  width: 500px;
+}
+
+.our-barbers {
+  background-color: var(--background-color-second);
+}
+
 .our-barbers h4 {
   font-size: 18px;
   letter-spacing: 2%;
@@ -244,6 +439,60 @@ h2 i h3 в різному порядку, не однаково. помітит�
   font-size: 14px;
   letter-spacing: 2%;
   color: var(--accent-color);
+}
+
+.our-barbers .cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.our-barbers .card {
+  width: calc((100% - 60px) / 3);
+  /* flex-shrink: 1; */
+}
+/* для того, щоб не ламалася сітка в разі, якщо одна з карток не завантажилася */
+
+.our-barbers .card-thumb {
+  margin-bottom: 30px;
+}
+
+.our-barbers img {
+  max-width: 100%;
+}
+
+.our-barbers .card-info {
+  text-align: center;
+}
+
+.our-barbers .card-info h4 {
+  margin-bottom: 8px;
+}
+
+.our-barbers .card-info p {
+  margin-bottom: 30px;
+}
+
+.our-barbers .card-info .list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.our-barbers .card-media {
+  display: block;
+  padding: 12px;
+}
+
+.photos-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 30px;
+}
+/* якщо один рядок то можна просто justify-content: space between */
+
+.photos-gallery img {
+  width: calc((100% - 90px) / 4);
 }
 
 .contacts .city-street {

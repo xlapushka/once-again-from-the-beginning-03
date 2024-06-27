@@ -17,7 +17,7 @@
   <body>
     <header>
       <div class="container">
-        <div class="hero-aside-menu">
+        <nav class="nav">
           <a href="/" class="logo link">
             <img
               src="./img/main-logo.svg"
@@ -26,52 +26,27 @@
               height="56"
             />
           </a>
-          <ul class="list hero-side-media">
-            <li>
-              <a
-                class="link"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                >Instagram</a
-              >
-            </li>
-            <li>
-              <a
-                class="link"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                >Youtube</a
-              >
-            </li>
-          </ul>
-        </div>
-        <nav class="nav">
-          <ul class="list nav-menu">
-            <li>
+          <ul class="list nav-menu first">
+            <li class="nav-menu-item nav-menu-first-item">
               <a href="#about" class="nav-accent link"> About </a>
             </li>
-            <li>
+            <li class="nav-menu-item nav-menu-first-item">
               <a href="#services-and-prices" class="nav-accent link">
                 Services and prices
               </a>
             </li>
-            <li>
+            <li class="nav-menu-item nav-menu-first-item">
               <a href="#barbers" class="nav-accent link"> Barbers </a>
             </li>
-            <li>
+            <li class="nav-menu-item nav-menu-first-item">
               <a href="#contacts" class="nav-accent link"> Contacts </a>
             </li>
           </ul>
-
-          <ul class="list nav-menu">
-            <li>
-              <a href="tel:" class="nav-accent link nav-menu"
-                >+38 044 111 11 11</a
-              >
+          <ul class="list nav-menu second">
+            <li class="nav-menu-item nav-menu-second-item">
+              <a href="tel:" class="nav-accent link">+38 044 111 11 11</a>
             </li>
-            <li>
+            <li class="nav-menu-item nav-menu-second-item">
               <button type="button" class="nav-button link btn">
                 Online-booking
               </button>
@@ -82,22 +57,51 @@
     </header>
 
     <main>
-      <section class="hero">
+      <section>
         <div class="container">
-          <div class="h-reverse">
-            <h1>BarberShop</h1>
-            <h2 class="subtitle">A hair salon for men in Kyiv</h2>
+          <div class="hero">
+            <div class="aside-menu">
+              <ul class="list aside-media">
+                <!-- <li>
+                  <p>--------</p>
+                </li> -->
+                <li class="aside-media-item">
+                  <a
+                    class="link"
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    >Instagram</a
+                  >
+                </li>
+                <li class="aside-media-item">
+                  <a
+                    class="link"
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    >Youtube</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="hero-content">
+              <div class="h-reverse">
+                <h1>BarberShop</h1>
+                <h2 class="subtitle">A hair salon for men in Kyiv</h2>
+              </div>
+              <h3 class="hero-h3">
+                We are experts in trendy men’s haircuts.<br />
+                We work quickly, carefully and with style.
+              </h3>
+            </div>
           </div>
-          <h3>
-            We are experts in trendy men’s haircuts.<br />
-            We work quickly, carefully and with style.
-          </h3>
         </div>
       </section>
 
       <section class="about" id="about">
-        <div class="container">
-          <div>
+        <div class="container div-flex">
+          <div class="about-photo">
             <img
               src="./img/about-1.jpg"
               alt="barber's hands are shaving"
@@ -109,7 +113,7 @@
               width="270"
             />
           </div>
-          <div>
+          <div class="about-content">
             <div class="h-no-reverse">
               <h2 class="subtitle">About</h2>
               <h3>Best Barbershop in your city</h3>
@@ -125,7 +129,7 @@
               always "on the same wave" with clients. Therefore, we are always
               ready to improve everyone who comes to us!
             </p>
-            <button class="button bth-text">ONLINE-BOOKING</button>
+            <button class="button btn bth-text">ONLINE-BOOKING</button>
           </div>
         </div>
       </section>
@@ -137,42 +141,58 @@
             <h3 class="subtitle">Spend your time with the best masters</h3>
           </div>
 
-          <div>
+          <div class="services-and-prices-pricelist">
             <ul class="list">
               <li>
-                <p>Men’s haircut</p>
-                <p>from 300 uah.</p>
+                <div class="line">
+                  <p>Men’s haircut</p>
+                  <p>from 300 uah.</p>
+                </div>
               </li>
               <li>
-                <p>Beard trim</p>
-                <p>from 300 uah.</p>
+                <div class="line">
+                  <p>Beard trim</p>
+                  <p>from 300 uah.</p>
+                </div>
               </li>
               <li>
-                <p>Beard trim</p>
-                <p>from 200 uah.</p>
+                <div class="line">
+                  <p>Beard trim</p>
+                  <p>from 200 uah.</p>
+                </div>
               </li>
               <li>
-                <p>Straight razor shave</p>
-                <p>from 200 uah.</p>
+                <div class="line">
+                  <p>Straight razor shave</p>
+                  <p>from 200 uah.</p>
+                </div>
               </li>
             </ul>
 
             <ul class="list">
               <li>
-                <p>Trainee’s haircut</p>
-                <p>from 50 uah.</p>
+                <div class="line">
+                  <p>Trainee’s haircut</p>
+                  <p>from 50 uah.</p>
+                </div>
               </li>
               <li>
-                <p>Haircut under the nozzle</p>
-                <p>from 200 uah.</p>
+                <div class="line">
+                  <p>Haircut under the nozzle</p>
+                  <p>from 200 uah.</p>
+                </div>
               </li>
               <li>
-                <p>Children’s haircut (0-12 y.o.)</p>
-                <p>from 300 uah.</p>
+                <div class="line">
+                  <p>Children’s haircut (0-12 y.o.)</p>
+                  <p>from 300 uah.</p>
+                </div>
               </li>
               <li>
-                <p>Camouflage of gray hair</p>
-                <p>from 200 uah.</p>
+                <div class="line">
+                  <p>Camouflage of gray hair</p>
+                  <p>from 200 uah.</p>
+                </div>
               </li>
             </ul>
           </div>
@@ -181,7 +201,7 @@
       </section>
 
       <section class="advantages">
-        <div class="container">
+        <div class="container div-flex">
           <ul class="list">
             <li>
               <p><span>600</span><sup>+</sup></p>
@@ -200,14 +220,16 @@
               <p>Gifts for regular customers</p>
             </li>
           </ul>
-          <div class="h-reverse">
-            <h2 class="subtitle">Old traditional school</h2>
-            <h3>&iquest;Why people come to us?</h3>
+          <div>
+            <div class="h-no-reverse">
+              <h2 class="subtitle">Old traditional school</h2>
+              <h3>&iquest;Why people come to us?</h3>
+            </div>
+            <h4>
+              Only good things are said about us. But it's better to see and
+              feel 1 time than read 10 times.
+            </h4>
           </div>
-          <h4>
-            Only good things are said about us. But it's better to see and feel
-            1 time than read 10 times.
-          </h4>
         </div>
       </section>
 
@@ -218,147 +240,161 @@
             <h3 class="subtitle">For true enjoyers of the atmosphere</h3>
           </div>
 
-          <ul>
+          <ul class="cards list">
             <li class="card">
-              <img src="./img/barber-1.jpg" alt="barber one" width="370" />
-              <h4>John Smith</h4>
-              <p>Extreme Barber</p>
-              <ul class="list">
-                <li aria-label="Instagram">
-                  <a class="media">
-                    <img
-                      src="./img/icon-instagram.svg"
-                      alt="instagram icon"
-                      width="20"
-                      height="20"
-                    />
-                  </a>
-                </li>
-                <li aria-label="Twitter">
-                  <a class="media">
-                    <img
-                      src="./img/icon-twitter.svg"
-                      alt="twitter icon"
-                      width="20"
-                      height="20"
-                    />
-                  </a>
-                </li>
-                <li aria-label="Facebook">
-                  <a class="media">
-                    <img
-                      src="./img/icon-facebook.svg"
-                      alt="facebook icon"
-                      width="20"
-                      height="20"
-                    />
-                  </a>
-                </li>
-                <li aria-label="LinkedIn">
-                  <a class="media">
-                    <img
-                      src="./img/icon-linkedin.svg"
-                      alt="linkedIn icon"
-                      width="20"
-                      height="20"
-                    />
-                  </a>
-                </li>
-              </ul>
+              <div class="card-thumb">
+                <img src="./img/barber-1.jpg" alt="barber one" width="370" />
+              </div>
+              <div class="card-info">
+                <h4>John Smith</h4>
+                <p>Extreme Barber</p>
+                <ul class="list">
+                  <li aria-label="Instagram">
+                    <a class="card-media">
+                      <img
+                        src="./img/icon-instagram.svg"
+                        alt="instagram icon"
+                        width="20"
+                        height="20"
+                      />
+                    </a>
+                  </li>
+                  <li aria-label="Twitter">
+                    <a class="card-media">
+                      <img
+                        src="./img/icon-twitter.svg"
+                        alt="twitter icon"
+                        width="20"
+                        height="20"
+                      />
+                    </a>
+                  </li>
+                  <li aria-label="Facebook">
+                    <a class="card-media">
+                      <img
+                        src="./img/icon-facebook.svg"
+                        alt="facebook icon"
+                        width="20"
+                        height="20"
+                      />
+                    </a>
+                  </li>
+                  <li aria-label="LinkedIn">
+                    <a class="card-media">
+                      <img
+                        src="./img/icon-linkedin.svg"
+                        alt="linkedIn icon"
+                        width="20"
+                        height="20"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
+
             <li class="card">
-              <img src="./img/barber-2.jpg" alt="barber one" width="370" />
-              <h4>Michele Doe</h4>
-              <p>Extreme Barber</p>
-              <ul class="list">
-                <li aria-label="Instagram">
-                  <a class="media">
-                    <img
-                      src="./img/icon-instagram.svg"
-                      alt="instagram icon"
-                      width="20"
-                      height="20"
-                    />
-                  </a>
-                </li>
-                <li aria-label="Twitter">
-                  <a class="media">
-                    <img
-                      src="./img/icon-twitter.svg"
-                      alt="twitter icon"
-                      width="20"
-                      height="20"
-                    />
-                  </a>
-                </li>
-                <li aria-label="Facebook">
-                  <a class="media">
-                    <img
-                      src="./img/icon-facebook.svg"
-                      alt="facebook icon"
-                      width="20"
-                      height="20"
-                    />
-                  </a>
-                </li>
-                <li aria-label="LinkedIn">
-                  <a class="media">
-                    <img
-                      src="./img/icon-linkedin.svg"
-                      alt="linkedIn icon"
-                      width="20"
-                      height="20"
-                    />
-                  </a>
-                </li>
-              </ul>
+              <div class="card-thumb">
+                <img src="./img/barber-2.jpg" alt="barber one" width="370" />
+              </div>
+              <div class="card-info">
+                <h4>Michele Doe</h4>
+                <p>Extreme Barber</p>
+                <ul class="list">
+                  <li aria-label="Instagram">
+                    <a class="card-media">
+                      <img
+                        src="./img/icon-instagram.svg"
+                        alt="instagram icon"
+                        width="20"
+                        height="20"
+                      />
+                    </a>
+                  </li>
+                  <li aria-label="Twitter">
+                    <a class="card-media">
+                      <img
+                        src="./img/icon-twitter.svg"
+                        alt="twitter icon"
+                        width="20"
+                        height="20"
+                      />
+                    </a>
+                  </li>
+                  <li aria-label="Facebook">
+                    <a class="card-media">
+                      <img
+                        src="./img/icon-facebook.svg"
+                        alt="facebook icon"
+                        width="20"
+                        height="20"
+                      />
+                    </a>
+                  </li>
+                  <li aria-label="LinkedIn">
+                    <a class="card-media">
+                      <img
+                        src="./img/icon-linkedin.svg"
+                        alt="linkedIn icon"
+                        width="20"
+                        height="20"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
+
             <li class="card">
-              <img src="./img/barber-2.jpg" alt="barber one" width="370" />
-              <h4>Alan Black</h4>
-              <p>Extreme Barber</p>
-              <ul class="list">
-                <li aria-label="Instagram">
-                  <a class="media">
-                    <img
-                      src="./img/icon-instagram.svg"
-                      alt="instagram icon"
-                      width="20"
-                      height="20"
-                    />
-                  </a>
-                </li>
-                <li aria-label="Twitter">
-                  <a class="media">
-                    <img
-                      src="./img/icon-twitter.svg"
-                      alt="twitter icon"
-                      width="20"
-                      height="20"
-                    />
-                  </a>
-                </li>
-                <li aria-label="Facebook">
-                  <a class="media">
-                    <img
-                      src="./img/icon-facebook.svg"
-                      alt="facebook icon"
-                      width="20"
-                      height="20"
-                    />
-                  </a>
-                </li>
-                <li aria-label="LinkedIn">
-                  <a class="media">
-                    <img
-                      src="./img/icon-linkedin.svg"
-                      alt="linkedIn icon"
-                      width="20"
-                      height="20"
-                    />
-                  </a>
-                </li>
-              </ul>
+              <div class="card-thumb">
+                <img src="./img/barber-3.jpg" alt="barber one" width="370" />
+              </div>
+              <div class="card-info">
+                <h4>Alan Black</h4>
+                <p>Extreme Barber</p>
+                <ul class="list">
+                  <li aria-label="Instagram">
+                    <a class="card-media">
+                      <img
+                        src="./img/icon-instagram.svg"
+                        alt="instagram icon"
+                        width="20"
+                        height="20"
+                      />
+                    </a>
+                  </li>
+                  <li aria-label="Twitter">
+                    <a class="card-media">
+                      <img
+                        src="./img/icon-twitter.svg"
+                        alt="twitter icon"
+                        width="20"
+                        height="20"
+                      />
+                    </a>
+                  </li>
+                  <li aria-label="Facebook">
+                    <a class="card-media">
+                      <img
+                        src="./img/icon-facebook.svg"
+                        alt="facebook icon"
+                        width="20"
+                        height="20"
+                      />
+                    </a>
+                  </li>
+                  <li aria-label="LinkedIn">
+                    <a class="card-media">
+                      <img
+                        src="./img/icon-linkedin.svg"
+                        alt="linkedIn icon"
+                        width="20"
+                        height="20"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>
@@ -368,7 +404,27 @@
         <div class="container">
           <h2 class="visually-hidden">Photos</h2>
           <h3 class="subtitle">In Latin, "barba" means "beard"</h3>
-          <div>
+          <div class="photos-gallery">
+            <img
+              src="./img/Rectangle-25.jpg"
+              alt="barber is haircutting"
+              width="270"
+            />
+            <img
+              src="./img/Rectangle-26.jpg"
+              alt="barber is haircutting"
+              width="270"
+            />
+            <img
+              src="./img/Rectangle-27.jpg"
+              alt="barber is working"
+              width="270"
+            />
+            <img
+              src="./img/Rectangle-28.jpg"
+              alt="barber's hands are haircutting"
+              width="270"
+            />
             <img
               src="./img/Rectangle-25.jpg"
               alt="barber is haircutting"
